@@ -16,6 +16,8 @@ import { UserTableComponent } from './shared/components/user-table/user-table.co
 import { CreateUserComponent } from './shared/components/create-user/create-user.component';
 import { DashboardComponent } from './shared/components/dashboard/dashboard.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { RmShowDirective } from './shared/directives/rm-show.directive';
+import { RmShow2Directive } from './shared/directives/rm-show-2.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     ChartComponent,
     UserTableComponent,
     CreateUserComponent,
-    DashboardComponent
+    DashboardComponent,
+    RmShowDirective,
+    RmShow2Directive
   ],
   imports: [
     BrowserModule,
