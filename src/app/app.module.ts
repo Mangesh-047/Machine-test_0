@@ -18,6 +18,7 @@ import { DashboardComponent } from './shared/components/dashboard/dashboard.comp
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { RmShowDirective } from './shared/directives/rm-show.directive';
 import { RmShow2Directive } from './shared/directives/rm-show-2.directive';
+import { LogoDirective } from './shared/directives/logo.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RmShow2Directive } from './shared/directives/rm-show-2.directive';
     CreateUserComponent,
     DashboardComponent,
     RmShowDirective,
-    RmShow2Directive
+    RmShow2Directive,
+    LogoDirective
   ],
   imports: [
     BrowserModule,

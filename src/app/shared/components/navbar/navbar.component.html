@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-m">
-    <a class="navbar-brand logo ml-lg-5 pl-lg-5" routerLink="/">LOGO ICON</a>
+    <a class="navbar-brand logo ml-lg-5 pl-lg-5" routerLink="/" appLogo>LOGO ICON</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" appNavdrop></span>
@@ -7,7 +7,7 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" appRmShow>
+            <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" appRmShow="show">
                 <a class="nav-link" routerLink="/">Dashboard <span class="sr-only">(current)</span></a>
             </li>
 
