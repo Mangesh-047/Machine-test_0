@@ -28,3 +28,17 @@
 .mat-i {
     font-size: 20px;
 }
+
+
+@media screen and (max-width: 600px) {
+    .round {
+        width: 30%;
+        height: 100px;
+        float: right;
+    }
+
+
+    .mb-50 {
+        margin-bottom: 20px;
+    }
+}

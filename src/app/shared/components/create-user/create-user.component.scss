@@ -8,3 +8,9 @@
     right: 24px;
     top: 35px;
 }
+
+@media screen and (max-width: 600px) {
+    .submit-btn {
+        float: right;
+    }
+}

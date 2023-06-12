@@ -56,3 +56,17 @@
     left: 22px;
     top: 28%;
 }
+
+@media screen and (max-width: 600px) {
+    .vector {
+        left: 22px;
+        top: 39.1%;
+        width: 445px;
+    }
+
+    .vector-1 {
+
+        left: 22px;
+        top: 26.7%;
+    }
+}
