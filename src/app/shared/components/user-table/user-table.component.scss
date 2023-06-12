@@ -37,3 +37,18 @@ th:last-child {
     display: none;
     align-items: center;
 }
+
+@media screen and (max-width: 600px) {
+    .head {
+        flex-direction: column;
+
+        input {
+            width: 100% !important;
+        }
+
+        .serarch-icon {
+            top: 110px;
+            right: 32px;
+        }
+    }
+}
