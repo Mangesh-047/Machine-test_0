@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-sm-4" *ngFor="let obj of cardDetails">
+        <div class="card shadow card-m mb-5 ">
+            <div class="card-body">
+                <div class="row mb-50">
+                    <div class="col-sm-6">
+                        <h1 class="font-weight-bold">{{obj.title}}</h1>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="round w-25-md">
+                            <div class="">
+                                <h1 class="mb-0 font-weight-bold">{{obj.precent}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between font-weight-bold ">
+
+
+                        <p class="d-flex align-items-center"> <mat-icon aria-hidden="false" fontIcon="circle"
+                                color="primary" class="mat-i"></mat-icon>
+                            In-Progress</p>
+                        <p>{{obj.progper}}%</p>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <mat-progress-bar mode="determinate" [value]="obj.progper"></mat-progress-bar>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

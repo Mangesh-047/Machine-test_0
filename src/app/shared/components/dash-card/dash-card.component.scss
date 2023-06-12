@@ -1,0 +1,30 @@
+.round {
+    border-radius: 22px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+}
+
+.card-m {
+    height: 280px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-m:hover {
+    background-color: #fced70;
+}
+
+.active-m {
+    background-color: #fced70;
+}
+
+.mb-50 {
+    margin-bottom: 90px;
+}
+
+.mat-i {
+    font-size: 20px;
+}

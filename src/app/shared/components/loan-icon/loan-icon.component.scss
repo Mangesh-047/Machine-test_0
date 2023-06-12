@@ -1,0 +1,58 @@
+// .card-loan {
+//     border-radius: 20px;
+//     margin-bottom: 26px;
+//     position: relative;
+// }
+
+
+
+// .card>img {
+//     width: 64px;
+//     height: 64px;
+// }
+
+
+.img {
+    height: 235px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    border-right: 2px solid #fff;
+    background-color: #AAA3FF;
+
+}
+
+.last {
+    border-right: none;
+    // border-radius: 0 55px 55px 0;
+}
+
+.br-tb {
+    border-radius: 15px 0 0 15px;
+}
+
+.br-lt {
+    border-radius: 0 15px 15px 0;
+}
+
+
+
+.vector {
+    vertical-align: middle;
+    border-style: none;
+    position: absolute;
+    z-index: 1;
+    right: 17px;
+    top: 424px;
+}
+
+.vector-1 {
+    vertical-align: middle;
+    border-style: none;
+    position: absolute;
+    z-index: 1;
+    left: 22px;
+    top: 28%;
+}

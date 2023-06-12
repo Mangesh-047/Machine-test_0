@@ -1,0 +1,39 @@
+.main-heading {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.sec-heading {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.serarch-icon {
+    position: absolute;
+    top: 12px;
+    right: 32px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    background-color: #AAA3FF;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+th:first-child {
+    border-radius: 12px 0 0 0;
+}
+
+th:last-child {
+    background-color: #AAA3FF;
+    border-radius: 0 12px 0 0;
+}
+
+.mat-paginator-range-actions {
+    display: none;
+    align-items: center;
+}
