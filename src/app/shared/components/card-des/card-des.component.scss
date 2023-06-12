@@ -10,3 +10,28 @@ p {
 .col-sm-3 {
     margin-bottom: 20px;
 }
+
+figure>img {
+    width: 100%;
+}
+
+.fig-content {
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    color: #fff;
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .fig-content {
+        position: absolute;
+        top: 140px;
+        left: 30px;
+        color: #fff;
+
+
+    }
+}

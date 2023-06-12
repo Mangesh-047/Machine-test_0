@@ -58,16 +58,30 @@
 }
 
 @media screen and (max-width: 600px) {
+
+
     .vector {
-        left: 18px;
-        top: 37.5%;
-        width: 270px;
-        height: 200px;
+        display: none;
     }
 
-    .vector-1 {
-
-        left: 22px;
-        top: 25.5%;
+    .img-2 {
+        background-image: url('../../../../assets/img/Vector\ \(1\).png');
+        background-repeat: no-repeat;
     }
+
 }
+
+.img-1 {
+    background-image: url('../../../../assets/img/Vector\ \(2\).png');
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+}
+
+
+
+// .div {
+//     background-image: url('../../../../assets/img/Vector\ \(1\).png');
+//     background-repeat: no-repeat;
+
+// }

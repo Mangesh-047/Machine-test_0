@@ -19,6 +19,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { RmShowDirective } from './shared/directives/rm-show.directive';
 import { RmShow2Directive } from './shared/directives/rm-show-2.directive';
 import { LogoDirective } from './shared/directives/logo.directive';
+import { SitemDropDirective } from './shared/directives/sitem-drop.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LogoDirective } from './shared/directives/logo.directive';
     DashboardComponent,
     RmShowDirective,
     RmShow2Directive,
-    LogoDirective
+    LogoDirective,
+    SitemDropDirective
   ],
   imports: [
     BrowserModule,
