@@ -6,9 +6,13 @@
     // }
 }
 
+.active {
+    border-bottom: 2px solid #fff;
+    // background-color: orange;
+}
 
 .navbar-nav li {
-    padding-left: 34px;
+    padding: 0 34px;
     font-size: 20px;
     cursor: pointer;
 }
