@@ -22,6 +22,7 @@ import { LogoDirective } from './shared/directives/logo.directive';
 import { SitemDropDirective } from './shared/directives/sitem-drop.directive';
 import { SerachElementPipe } from './shared/pipe/serach-element.pipe';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     MatPaginatorModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

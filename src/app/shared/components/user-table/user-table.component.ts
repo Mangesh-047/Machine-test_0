@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { PeriodicElement } from '../../model/table';
-import { ELEMENT_DATA } from '../../const/tableData';
+import { TableDataService } from '../../services/table-data.service';
 
 @Component({
   selector: 'app-user-table',
@@ -10,20 +10,36 @@ import { ELEMENT_DATA } from '../../const/tableData';
   styleUrls: ['./user-table.component.scss']
 })
 export class UserTableComponent implements OnInit {
+  tableArray!: Array<PeriodicElement>
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+  displayedColumns: string[] = ['position', 'name', 'userid', 'role'];
+  dataSource: any;
 
   @ViewChild(MatPaginator)
   paginator!: MatPaginator;
   serachInput!: string;
+
+  constructor(private _tableService: TableDataService) { }
+
+
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+
   }
 
-  constructor() { }
 
   ngOnInit(): void {
+    this._tableService.getAllPost()
+      .subscribe(res => {
+        this.tableArray = res
+
+        // console.log(this.tableArray);
+        // console.log(res);
+
+        this.dataSource = new MatTableDataSource<PeriodicElement>(this.tableArray);
+        this.dataSource.paginator = this.paginator;
+        console.log(this.dataSource);
+      })
+
   }
 
 }

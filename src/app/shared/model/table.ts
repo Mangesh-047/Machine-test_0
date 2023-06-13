@@ -1,6 +1,7 @@
 export interface PeriodicElement {
-    name: string;
+    uname: string;
     position: number;
-    weight: number;
-    symbol: string;
+    uid: string;
+    role: string;
+    id: number
 }
