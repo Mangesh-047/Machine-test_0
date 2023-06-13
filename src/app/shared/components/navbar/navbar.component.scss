@@ -16,3 +16,14 @@
 li:last-child {
     padding-right: 96px;
 }
+
+@media screen and (max-width: 600px) {
+    li:first-child {
+        margin-top: 20px;
+    }
+
+    .navbar-nav li {
+        margin-bottom: 20px;
+        padding-left: 0px;
+    }
+}

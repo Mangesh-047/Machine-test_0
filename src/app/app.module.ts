@@ -20,6 +20,8 @@ import { RmShowDirective } from './shared/directives/rm-show.directive';
 import { RmShow2Directive } from './shared/directives/rm-show-2.directive';
 import { LogoDirective } from './shared/directives/logo.directive';
 import { SitemDropDirective } from './shared/directives/sitem-drop.directive';
+import { SerachElementPipe } from './shared/pipe/serach-element.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,14 +39,16 @@ import { SitemDropDirective } from './shared/directives/sitem-drop.directive';
     RmShowDirective,
     RmShow2Directive,
     LogoDirective,
-    SitemDropDirective
+    SitemDropDirective,
+    SerachElementPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
