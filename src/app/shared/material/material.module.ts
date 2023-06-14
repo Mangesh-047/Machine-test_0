@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const mat = [
   MatProgressBarModule,
   MatIconModule,
   MatTableModule,
+  MatProgressSpinnerModule
 ]
 
 @NgModule({
