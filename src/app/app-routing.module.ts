@@ -4,12 +4,15 @@ import { DashboardComponent } from './shared/components/dashboard/dashboard.comp
 import { UserTableComponent } from './shared/components/user-table/user-table.component';
 import { CreateUserComponent } from './shared/components/create-user/create-user.component';
 import { ChartComponent } from './shared/components/chart/chart.component';
+import { LoginComponent } from './shared/components/login/login.component';
+import { AuthGuard } from './shared/services/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
-  { path: 'user-table', component: UserTableComponent },
-  { path: 'create-user', component: CreateUserComponent },
-  { path: 'chart', component: ChartComponent },
+  { path: '', component: LoginComponent },
+  { path: 'home', component: DashboardComponent, canActivate: [AuthGuard] },
+  { path: 'user-table', component: UserTableComponent, canActivate: [AuthGuard] },
+  { path: 'create-user', component: CreateUserComponent, canActivate: [AuthGuard] },
+  { path: 'chart', component: ChartComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

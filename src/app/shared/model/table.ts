@@ -1,4 +1,4 @@
-export interface PeriodicElement {
+export interface userInfo {
     uname: string;
     position: number;
     uid: string;

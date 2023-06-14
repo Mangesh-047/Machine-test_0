@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { PeriodicElement } from '../../model/table';
 import { TableDataService } from '../../services/table-data.service';
+import { userInfo } from '../../model/table';
+import { userTable } from '../../const/tableData';
 
 @Component({
   selector: 'app-user-table',
@@ -10,7 +11,7 @@ import { TableDataService } from '../../services/table-data.service';
   styleUrls: ['./user-table.component.scss']
 })
 export class UserTableComponent implements OnInit {
-  tableArray!: Array<PeriodicElement>
+  tableArray!: Array<userInfo>
 
   displayedColumns: string[] = ['position', 'name', 'userid', 'role'];
   dataSource: any;
@@ -23,22 +24,22 @@ export class UserTableComponent implements OnInit {
 
 
   ngAfterViewInit() {
-
+    this.dataSource = new MatTableDataSource<userInfo>(userTable);
+    this.dataSource.paginator = this.paginator;
   }
 
 
   ngOnInit(): void {
-    this._tableService.getAllPost()
-      .subscribe(res => {
-        this.tableArray = res
+    // this._tableService.getAllPost()
+    //   .subscribe(res => {
+    //     this.tableArray = res
 
-        // console.log(this.tableArray);
-        // console.log(res);
+    // console.log(this.tableArray);
+    // console.log(res);
 
-        this.dataSource = new MatTableDataSource<PeriodicElement>(this.tableArray);
-        this.dataSource.paginator = this.paginator;
-        console.log(this.dataSource);
-      })
+
+    //   console.log(this.dataSource);
+    // })
 
   }
 
