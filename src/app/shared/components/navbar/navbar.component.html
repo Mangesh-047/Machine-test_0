@@ -30,11 +30,12 @@
             <li class="nav-item">
                 <a class="nav-link" (click)="onFullscreen()" (click)="closeFullscreen()">
 
-                    <img src="../../../../assets/img/Vector.png" alt="fullscreen" title="Full Screen" class="img">
+                    <img src="../../../../assets/img/Vector.png" alt="fullscreen" title="Full Screen" class="img"
+                        appFullscreen>
                 </a>
             </li>
 
-            <li class="nav-item p-0">
+            <li class="nav-item px-3">
                 <a class="nav-link btn btn-danger btn-lg text-white logout" (click)="onLogOut($event)">
                     Log Out
                 </a>

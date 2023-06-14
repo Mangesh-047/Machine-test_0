@@ -24,6 +24,7 @@ import { SerachElementPipe } from './shared/pipe/serach-element.pipe';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './shared/components/login/login.component';
+import { FullscreenDirective } from './shared/directives/fullscreen.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { LoginComponent } from './shared/components/login/login.component';
     LogoDirective,
     SitemDropDirective,
     SerachElementPipe,
-    LoginComponent
+    LoginComponent,
+    FullscreenDirective
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
 
 
   inputType: string = 'password'
+  inputType2: string = 'password'
+
   alreadyHaveAccount: boolean = true
 
   constructor(
@@ -34,6 +36,15 @@ export class LoginComponent implements OnInit {
     // }
 
     this.inputType === 'password' ? this.inputType = 'text' : this.inputType = 'password'
+
   }
+
+
+  onPassShow2() {
+
+    this.inputType2 === 'password' ? this.inputType2 = 'text' : this.inputType2 = 'password'
+
+  }
+
 
 }

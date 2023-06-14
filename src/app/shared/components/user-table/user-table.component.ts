@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { TableDataService } from '../../services/table-data.service';
+// import { TableDataService } from '../../services/table-data.service';
 import { userInfo } from '../../model/table';
 import { userTable } from '../../const/tableData';
 
@@ -20,12 +20,14 @@ export class UserTableComponent implements OnInit {
   paginator!: MatPaginator;
   serachInput!: string;
 
-  constructor(private _tableService: TableDataService) { }
+  constructor(
+    // private _tableService: TableDataService
+  ) { }
 
 
   ngAfterViewInit() {
-    this.dataSource = new MatTableDataSource<userInfo>(userTable);
-    this.dataSource.paginator = this.paginator;
+    //   this.dataSource = new MatTableDataSource<userInfo>(userTable);
+    //   this.dataSource.paginator = this.paginator;
   }
 
 
@@ -40,6 +42,9 @@ export class UserTableComponent implements OnInit {
 
     //   console.log(this.dataSource);
     // })
+
+    this.dataSource = new MatTableDataSource<userInfo>(userTable);
+    this.dataSource.paginator = this.paginator;
 
   }
 
