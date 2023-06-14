@@ -63,7 +63,7 @@ export class NavbarComponent implements OnInit {
   onLogOut(eve: Event) {
     this._authService.logOutToApp()
     let ele = eve.target as HTMLFormElement
-    console.log(ele.closest('div'));
+    // console.log(ele.closest('div'));
     ele.closest('div')?.classList.remove('show')
     // console.log(ele.parentElement?.previousElementSibling?.previousElementSibling?.previousElementSibling?.childNodes[1]);
 
