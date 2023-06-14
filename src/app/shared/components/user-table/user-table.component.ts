@@ -26,8 +26,8 @@ export class UserTableComponent implements OnInit {
 
 
   ngAfterViewInit() {
-    //   this.dataSource = new MatTableDataSource<userInfo>(userTable);
-    //   this.dataSource.paginator = this.paginator;
+    this.dataSource = new MatTableDataSource<userInfo>(userTable);
+    this.dataSource.paginator = this.paginator;
   }
 
 
@@ -43,8 +43,8 @@ export class UserTableComponent implements OnInit {
     //   console.log(this.dataSource);
     // })
 
-    this.dataSource = new MatTableDataSource<userInfo>(userTable);
-    this.dataSource.paginator = this.paginator;
+    // this.dataSource = new MatTableDataSource<userInfo>(userTable);
+    // this.dataSource.paginator = this.paginator;
 
   }
 
