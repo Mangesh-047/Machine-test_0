@@ -45,7 +45,8 @@ export class AuthService {
     } else {
       this._snackbarService.snackbarOpen(`....Invaild Email and Password`)
       setTimeout(() => {
-        this._snackbarService.snackbarOpen(`EMAIL: jen@gmail.com , PASSWORD: zaq1ZAQ!`)
+        // this._snackbarService.snackbarOpen(`EMAIL: jen@gmail.com , PASSWORD: zaq1ZAQ!`)
+        this._snackbarService.snackbarOpen(`EMAIL: 123 , PASSWORD: 123`)
 
       }, 2000);
 
