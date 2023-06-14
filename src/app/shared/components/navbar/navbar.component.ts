@@ -62,10 +62,10 @@ export class NavbarComponent implements OnInit {
 
   onLogOut(eve: Event) {
     this._authService.logOutToApp()
-    // console.log(eve.target);
     let ele = eve.target as HTMLFormElement
-
-    console.log(ele.parentElement?.previousElementSibling?.previousElementSibling?.previousElementSibling?.childNodes[1]);
+    console.log(ele.closest('div'));
+    ele.closest('div')?.classList.remove('show')
+    // console.log(ele.parentElement?.previousElementSibling?.previousElementSibling?.previousElementSibling?.childNodes[1]);
 
     let dropdown = <HTMLElement>ele.parentElement?.previousElementSibling?.previousElementSibling?.previousElementSibling?.childNodes[1]
 
