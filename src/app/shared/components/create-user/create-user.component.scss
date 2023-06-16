@@ -14,10 +14,6 @@ label::after {
     color: red;
 }
 
-p::before {
-    content: "*";
-    color: red;
-}
 
 @media screen and (max-width: 600px) {
     .submit-btn {
