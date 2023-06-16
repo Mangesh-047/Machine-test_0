@@ -24,19 +24,19 @@ export class NavbarComponent implements OnInit {
   onFullscreen() {
     if (this.elem.requestFullscreen && this.flag) {
       this.elem.requestFullscreen();
-      this.flag = false
+      this.flag = !this.flag
     } else if (this.elem.mozRequestFullScreen && this.flag) {
       /* Firefox */
       this.elem.mozRequestFullScreen();
-      this.flag = false
+      this.flag = !this.flag
     } else if (this.elem.webkitRequestFullscreen && this.flag) {
       /* Chrome, Safari and Opera */
       this.elem.webkitRequestFullscreen();
-      this.flag = false
+      this.flag = !this.flag
     } else if (this.elem.msRequestFullscreen && this.flag) {
       /* IE/Edge */
       this.elem.msRequestFullscreen();
-      this.flag = false
+      this.flag = !this.flag
     }
   }
 
@@ -44,17 +44,17 @@ export class NavbarComponent implements OnInit {
     if (this.document.mozCancelFullScreen && !this.flag) {
       /* Firefox */
       this.document.mozCancelFullScreen();
-      this.flag = true
+      this.flag = !this.flag
 
     } else if (this.document.webkitExitFullscreen && !this.flag) {
       /* Chrome, Safari and Opera */
       this.document.webkitExitFullscreen();
-      this.flag = true
+      this.flag = !this.flag
 
     } else if (this.document.msExitFullscreen && !this.flag) {
       /* IE/Edge */
       this.document.msExitFullscreen();
-      this.flag = true
+      this.flag = !this.flag
 
     }
   }

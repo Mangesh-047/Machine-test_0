@@ -9,6 +9,16 @@
     top: 35px;
 }
 
+label::after {
+    content: "*";
+    color: red;
+}
+
+p::before {
+    content: "*";
+    color: red;
+}
+
 @media screen and (max-width: 600px) {
     .submit-btn {
         float: right;
