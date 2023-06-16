@@ -11,8 +11,8 @@ export class CreateUserComponent implements OnInit {
   inputType: string = 'password'
   inputType2: string = 'password'
 
-  icon: string = 'remove_red_eye'
-  icon2: string = 'remove_red_eye'
+  icon: string = 'visibility'
+  icon2: string = 'visibility'
 
   constructor() { }
 
@@ -22,7 +22,7 @@ export class CreateUserComponent implements OnInit {
   changeInputType() {
 
     this.inputType === 'password' ? this.inputType = 'text' : this.inputType = 'password'
-    this.icon2 === 'remove_red_eye' ? this.icon2 = 'remove_eye' : this.icon2 = 'remove_red_eye'
+    this.icon2 === 'visibility' ? this.icon2 = 'visibility_off' : this.icon2 = 'visibility'
 
 
   }
@@ -32,7 +32,7 @@ export class CreateUserComponent implements OnInit {
 
     this.inputType2 === 'password' ? this.inputType2 = 'text' : this.inputType2 = 'password'
 
-    this.icon === 'remove_red_eye' ? this.icon = 'remove_eye' : this.icon = 'remove_red_eye'
+    this.icon === 'visibility' ? this.icon = 'visibility_off' : this.icon = 'visibility'
 
   }
 
