@@ -62,4 +62,24 @@ canvas {
         border-bottom: 2px solid gray;
         margin: 20px 0;
     }
+
+    .progressbar,
+    .progressbar2,
+    .progressbar3 {
+        height: 16px;
+        background-color: #AAA3FF;
+    }
+
+    .progressbar {
+        width: 59%;
+    }
+
+    .progressbar2 {
+        width: 31%;
+    }
+
+    .progressbar3 {
+        width: 10%;
+    }
+
 }
