@@ -47,6 +47,10 @@ canvas {
 
 }
 
+.demo {
+    font-size: 22px;
+    font-weight: 500;
+}
 
 @media screen and (max-width: 600px) {
     .heading {
@@ -67,6 +71,7 @@ canvas {
     .progressbar2,
     .progressbar3 {
         height: 16px;
+        margin-top: 8px;
         background-color: #AAA3FF;
     }
 

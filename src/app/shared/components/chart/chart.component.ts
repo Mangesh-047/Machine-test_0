@@ -43,12 +43,12 @@ export class ChartComponent implements OnInit {
     // backgroundColor: '#000',
 
   };
-  public pieChartLabels = [['Download', 'Sales'], ['In', 'Store', 'Sales'], 'Mail Sales'];
+  public pieChartLabels = ['Sales', 'Store', 'goal', 'sme',];
   public pieChartDatasets = [{
     data: [35, 30, 15, 25],
     backgroundColor: ["#A3EEFF", "#9A9A9A", "#646464", "#AAA3FF"]
   }];
-  public pieChartLegend = false;
+  public pieChartLegend = true;
   public pieChartPlugins = [];
 
 
