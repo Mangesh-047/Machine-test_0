@@ -13,7 +13,8 @@ const mat = [
   MatTableModule,
   MatProgressSpinnerModule,
   MatButtonModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+
 ]
 
 @NgModule({

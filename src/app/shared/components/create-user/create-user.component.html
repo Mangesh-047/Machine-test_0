@@ -11,44 +11,83 @@
                     </p>
                 </div>
                 <hr class="bg-secondary">
-                <form>
+                <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()">
                     <div class="row">
                         <div class="col-sm-8">
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="First name">First name</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" formControlName="firstName">
+                                    <ng-container *ngIf="f['firstName'].touched && f['firstName'].invalid">
+
+                                        <p class="text-danger" *ngIf="f['firstName'].hasError('required')">
+                                            this field is Mandatory
+                                        </p>
+                                    </ng-container>
                                 </div>
                                 <div class="col">
                                     <label for="Last name">Last name</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" formControlName="lastName">
+
+                                    <ng-container *ngIf="f['lastName'].touched && f['lastName'].invalid">
+                                        <p class="text-danger" *ngIf="f['lastName'].hasError('required')">
+                                            this field is Mandatory
+                                        </p>
+                                    </ng-container>
                                 </div>
                             </div>
 
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="gengder">Gender</label>
-                                    <select name="" class="form-control" id="">
+                                    <select name="" class="form-control" id="" formControlName="gender">
                                         <option value="">Select Gender</option>
                                         <option value="male">Male</option>
                                         <option value="Female">Female</option>
                                         <option value="other">Others</option>
                                     </select>
+
+                                    <ng-container *ngIf="f['gender'].touched && f['gender'].invalid">
+                                        <p class="text-danger" *ngIf="f['gender'].hasError('required')">
+                                            this field is Mandatory
+                                        </p>
+                                    </ng-container>
                                 </div>
                                 <div class="col">
                                     <label for="dob">Date-of-Birth</label>
-                                    <input type="date" class="form-control">
+                                    <input type="date" class="form-control" formControlName="dob">
+                                    <ng-container *ngIf="f['dob'].touched && f['dob'].invalid">
+                                        <p class="text-danger" *ngIf="f['dob'].hasError('required')">
+                                            this field is Mandatory
+                                        </p>
+                                    </ng-container>
                                 </div>
                             </div>
 
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="email">Email</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" formControlName="email">
+                                    <ng-container *ngIf="f['email'].touched && f['email'].invalid">
+                                        <p class="text-danger" *ngIf="f['email'].hasError('required')">
+                                            this field is Mandatory
+                                        </p>
+                                        <p class="text-danger" *ngIf="f['email'].hasError('pattern')">
+                                            please enter valid Email Id
+                                        </p>
+                                    </ng-container>
                                 </div>
                                 <div class="col">
                                     <label for="Last name">Phone Number</label>
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" formControlName="phone">
+                                    <ng-container *ngIf="f['phone'].touched && f['phone'].invalid">
+                                        <p class="text-danger" *ngIf="f['phone'].hasError('required')">
+                                            this field is Mandatory
+                                        </p>
+                                        <p class="text-danger" *ngIf="f['phone'].hasError('minlength')">
+                                            please enter valid phone number
+                                        </p>
+                                    </ng-container>
                                 </div>
                             </div>
 
@@ -74,7 +113,6 @@
                                     <label for="re-password">Re-Enter Password</label>
                                     <input [type]="inputType2" class="form-control position-relative">
                                     <mat-icon class="eye" (click)="changeInputType2()">{{icon}}</mat-icon>
-
                                 </div>
                             </div>
                         </div>

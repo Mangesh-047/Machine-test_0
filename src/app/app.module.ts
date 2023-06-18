@@ -21,10 +21,11 @@ import { RmShow2Directive } from './shared/directives/rm-show-2.directive';
 import { LogoDirective } from './shared/directives/logo.directive';
 import { SitemDropDirective } from './shared/directives/sitem-drop.directive';
 import { SerachElementPipe } from './shared/pipe/serach-element.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './shared/components/login/login.component';
 import { FullscreenDirective } from './shared/directives/fullscreen.directive';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,9 @@ import { FullscreenDirective } from './shared/directives/fullscreen.directive';
     MaterialModule,
     MatPaginatorModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

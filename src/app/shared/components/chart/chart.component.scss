@@ -1,0 +1,65 @@
+canvas {
+    width: 100%;
+}
+
+.total {
+    font-size: 22px;
+}
+
+.bg-purple {
+    background-color: #AAA3FF;
+}
+
+.br {
+    border-right: 2px solid gray;
+}
+
+.clickhere {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.main-heading {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.userPara {
+    font-size: 22px;
+}
+
+.progressbar,
+.progressbar2,
+.progressbar3 {
+    height: 30px;
+    width: 100%;
+    background-color: #AAA3FF;
+}
+
+.progressbar2 {
+    background-color: #000 !important;
+    width: 69%;
+
+}
+
+.progressbar3 {
+    width: 10%;
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .heading {
+        flex-direction: column;
+    }
+
+    .bar {
+        flex-direction: column;
+    }
+
+    .br {
+        border: 0;
+        border-bottom: 2px solid gray;
+        margin: 20px 0;
+    }
+}
