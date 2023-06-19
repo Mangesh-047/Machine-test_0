@@ -17,8 +17,8 @@ export class ChartComponent implements OnInit {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct'],
 
     datasets: [
-      { data: [2, 1, 3, 3, 4, 2, 4, 1, 4, 1], label: 'Series A', backgroundColor: '#AAA3FF' },
-      { data: [2, 3, 4, 1, 3, 2, 2, 3, 2, 1], label: 'Series B', backgroundColor: '#000' }
+      { data: [600, 630, 150, 430, 120, 520, 550, 800, 80, 390], label: 'Series A', backgroundColor: '#AAA3FF' },
+      { data: [960, 100, 70, 350, 520, 120, 270, 780, 2, 290], label: 'Series B', backgroundColor: '#000' }
     ]
   };
 
