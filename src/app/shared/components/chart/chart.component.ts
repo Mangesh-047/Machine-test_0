@@ -18,7 +18,7 @@ export class ChartComponent implements OnInit {
 
     datasets: [
       { data: [2, 1, 3, 3, 4, 2, 4, 1, 4, 1], label: 'Series A', backgroundColor: '#AAA3FF' },
-      { data: [2, 3, 0, 1, 3, 2, 2, 0, 2, 1], label: 'Series B', backgroundColor: '#000' }
+      { data: [2, 3, 4, 1, 3, 2, 2, 3, 2, 1], label: 'Series B', backgroundColor: '#000' }
     ]
   };
 
@@ -26,8 +26,7 @@ export class ChartComponent implements OnInit {
     responsive: true,
   };
 
-  constructor() {
-  }
+  constructor() { }
 
 
   ngOnInit(): void {
@@ -50,8 +49,5 @@ export class ChartComponent implements OnInit {
   }];
   public pieChartLegend = true;
   public pieChartPlugins = [];
-
-
-
 
 }
