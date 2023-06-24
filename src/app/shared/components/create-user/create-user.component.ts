@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { EmailValidator } from '../../validators/email_validators';
 import { CustomRegex } from '../../const/validators_regexp';
+import { NospaceBar } from '../../validators/noSpace_validators';
 
 @Component({
   selector: 'app-create-user',
@@ -24,17 +25,29 @@ export class CreateUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.createUserForm()
+    this.f['password']
+      .valueChanges
+      .subscribe((res: string) => {
+        // console.log(res);
+        if (this.f['password'].valid) {
+          this.f['confirmPassword'].enable()
+        } else {
+          this.f['confirmPassword'].disable()
+        }
+      })
   }
 
 
   createUserForm() {
     this.userForm = new FormGroup({
-      firstName: new FormControl(null, [Validators.required]),
-      lastName: new FormControl(null, [Validators.required]),
+      firstName: new FormControl(null, [Validators.required, NospaceBar.noSpace]),
+      lastName: new FormControl(null, [Validators.required, NospaceBar.noSpace]),
       dob: new FormControl(null, [Validators.required]),
       email: new FormControl(null, [Validators.required, Validators.pattern(CustomRegex.email)]),
       phone: new FormControl(null, [Validators.required, Validators.minLength(10)]),
       gender: new FormControl('', [Validators.required]),
+      password: new FormControl(null, [Validators.required, Validators.pattern(CustomRegex.password)]),
+      confirmPassword: new FormControl({ value: null, disabled: true }, [Validators.required]),
     })
   }
 
@@ -52,7 +65,12 @@ export class CreateUserComponent implements OnInit {
   }
 
   onFormSubmit() {
-    console.log(this.userForm);
+
+    if (this.userForm.valid && this.f['password'].value === this.f['confirmPassword'].value) {
+
+      console.log(this.userForm);
+      console.log(this.userForm.value);
+    }
 
   }
 }

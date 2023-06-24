@@ -33,6 +33,7 @@ export class AuthGuard implements CanActivate, CanActivateChild {
       .then((loginStatus: Boolean) => {
         if (loginStatus) {
           // this._snackbarService.snackbarOpen('yes')
+          // this._router.navigate(['/home'])
           return true;
         } else {
           this._snackbarService.snackbarOpen(`please login to use our Services`);

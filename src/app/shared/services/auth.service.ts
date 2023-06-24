@@ -17,6 +17,9 @@ export class AuthService {
   isAuthenticated(): Promise<boolean> {
     return new Promise((res, rej) => {
       this.isUserLogin = Boolean(localStorage.getItem('token')) ?? false
+
+
+      // this._router.navigate(['/home'])
       res(this.isUserLogin);
     })
   }

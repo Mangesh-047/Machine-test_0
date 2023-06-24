@@ -24,6 +24,13 @@
                                             this field is Mandatory
                                         </p>
                                     </ng-container>
+
+                                    <ng-container *ngIf="f['firstName'].dirty && f['firstName'].invalid">
+
+                                        <p class="text-danger" *ngIf="f['firstName'].hasError('noSpaceError')">
+                                            {{f['firstName'].errors?.['noSpaceError']}}
+                                        </p>
+                                    </ng-container>
                                 </div>
                                 <div class="col">
                                     <label for="Last name">Last name</label>
@@ -34,13 +41,21 @@
                                             this field is Mandatory
                                         </p>
                                     </ng-container>
+
+
+                                    <ng-container *ngIf="f['lastName'].dirty && f['lastName'].invalid">
+
+                                        <p class="text-danger" *ngIf="f['lastName'].hasError('noSpaceError')">
+                                            {{f['lastName'].errors?.['noSpaceError']}}
+                                        </p>
+                                    </ng-container>
                                 </div>
                             </div>
 
                             <div class="row mb-4">
                                 <div class="col">
-                                    <label for="gengder">Gender</label>
-                                    <select name="" class="form-control" id="" formControlName="gender">
+                                    <label for="gender">Gender</label>
+                                    <select name="" class=" form-control" id="" formControlName="gender">
                                         <option value="">Select Gender</option>
                                         <option value="male">Male</option>
                                         <option value="Female">Female</option>
@@ -105,20 +120,34 @@
                             <div class="row mb-4">
                                 <div class="col">
                                     <label for="password">Password</label>
-                                    <input [type]="inputType" class="form-control position-relative">
-                                    <mat-icon class="eye" (click)="changeInputType()">{{icon2}}</mat-icon>
+                                    <input [type]="inputType" class="form-control position-relative"
+                                        formControlName="password">
+                                    <mat-icon class=" eye" (click)="changeInputType()">{{icon2}}</mat-icon>
+
+                                    <ng-container *ngIf="f['password'].invalid && f['password'].touched">
+                                        <p class="text-danger" *ngIf="f['password'].hasError('required')">
+                                            password is Mandatory
+                                        </p>
+                                        <p class="text-danger mt-2" *ngIf="f['password'].hasError('pattern')">
+                                            password must be at least 8 characters long, one uppercase with one
+                                            lowsercase , one special & one numeric character
+                                        </p>
+                                    </ng-container>
 
                                 </div>
                                 <div class="col">
                                     <label for="re-password">Re-Enter Password</label>
-                                    <input [type]="inputType2" class="form-control position-relative">
+                                    <input [type]="inputType2" class="form-control position-relative"
+                                        formControlName="confirmPassword">
                                     <mat-icon class="eye" (click)="changeInputType2()">{{icon}}</mat-icon>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <button class="btn btn-bg  px-5 py-2 submit-btn">Create</button>
+                    <!-- <button class="btn btn-bg  px-5 py-2 submit-btn">Create</button> -->
+                    <button class="btn btn-bg  px-5 py-2 submit-btn"
+                        [disabled]="userForm.invalid || (f['password'].value !== f['confirmPassword'].value)">Create</button>
                 </form>
 
             </div>
